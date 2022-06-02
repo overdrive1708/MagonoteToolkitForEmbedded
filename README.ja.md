@@ -1,7 +1,8 @@
+[English](README.md) | [日本語](README.ja.md)
+
 # MagonoteToolkitForEmbedded
 かゆいところに手が届く!!  
 ソフト開発ツールキット for 組み込みソフトウェア開発
-
 
 ## 機能一覧
 
