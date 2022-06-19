@@ -5,14 +5,32 @@
              xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:p = "clr-namespace:MagonoteToolkitForEmbedded.Properties"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance Type=viewmodels:UserControlAboutInfoViewModel, IsDesignTimeCreatable=True}"   
              mc:Ignorable="d">
     <Grid Margin="10,10,10,10">
         <StackPanel>
-            <TextBlock Text="{Binding Product}"     Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
-            <TextBlock Text="{Binding Version}"     Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
-            <TextBlock Text="{Binding Copyright}"   Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.AboutInfoProductTitle}"      Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
+            <TextBlock Text="{Binding ProductBody}"                             Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.AboutInfoVersionTitle}"      Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
+            <TextBlock Text="{Binding VersionBody}"                             Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.AboutInfoLicenseTitle}"      Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
+            <TextBlock Text="{Binding LicenseBody}"                             Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+            <TextBlock>
+                <Hyperlink
+                    Cursor="Hand" Command="{Binding CommandTransitionView}" CommandParameter="https://github.com/overdrive1708/MagonoteToolkitForEmbedded/blob/main/LICENSE">
+                    https://github.com/overdrive1708/MagonoteToolkitForEmbedded/blob/main/LICENSE
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock Text="{x:Static p:Resources.AboutInfoLibrariesTitle}"    Style="{StaticResource MaterialDesignBody1TextBlock}"></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.AboutInfoLibrariesBody}"     Style="{StaticResource MaterialDesignBody2TextBlock}"></TextBlock>
+            <TextBlock>
+                <Hyperlink
+                    Cursor="Hand" Command="{Binding CommandTransitionView}" CommandParameter="https://github.com/overdrive1708/MagonoteToolkitForEmbedded/blob/main/README.md">
+                    https://github.com/overdrive1708/MagonoteToolkitForEmbedded/blob/main/README.md
+                </Hyperlink>
+            </TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -12,8 +12,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         /// <summary>
         /// タイトル
         /// </summary>
-        static private string _titlebase = "Magonote Toolkit For Embedded";
-        private string _title = _titlebase;
+        private string _title = Properties.Resources.MainTitle;
         public string Title
         {
             get { return _title; }
@@ -58,7 +57,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         /// <summary>
         /// 画面遷移コマンド実行処理
         /// </summary>
-        /// <param name="viewname">画面遷移先の</param>
+        /// <param name="viewname">画面遷移先のユーザーコントロール名</param>
         private void ExecuteCommandTransitionView(string viewname)
         {
             // 指定された画面に遷移する
@@ -68,7 +67,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             switch (viewname)
             {
                 case "UserControlAboutInfo":
-                    Title = $"{_titlebase} | {UserControlAboutInfoViewModel.title}";
+                    Title = $"{Properties.Resources.MainTitle} | {Properties.Resources.SubTitleAboutInfo}";
                     break;
                 default:
                     break;
