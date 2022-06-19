@@ -5,13 +5,14 @@
              xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:p = "clr-namespace:MagonoteToolkitForEmbedded.Properties"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance Type=viewmodels:UserControlWelcomeViewModel, IsDesignTimeCreatable=True}"
              mc:Ignorable="d">
     <Grid Margin="10,10,10,10">
         <StackPanel>
-            <TextBlock Text="{Binding WelcomeMessageTitle}" Style="{StaticResource MaterialDesignHeadline5TextBlock}"   ></TextBlock>
-            <TextBlock Text="{Binding WelcomeMessageBody}"  Style="{StaticResource MaterialDesignBody1TextBlock}"       ></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.WelcomeMessageTitle}"    Style="{StaticResource MaterialDesignHeadline5TextBlock}"   ></TextBlock>
+            <TextBlock Text="{x:Static p:Resources.WelcomeMessageBody}"     Style="{StaticResource MaterialDesignBody1TextBlock}"       ></TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>

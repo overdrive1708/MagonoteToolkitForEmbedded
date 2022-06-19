@@ -7,6 +7,7 @@
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                   xmlns:p = "clr-namespace:MagonoteToolkitForEmbedded.Properties"
                    prism:ViewModelLocator.AutoWireViewModel="True"
                    d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
                    mc:Ignorable="d"
@@ -17,17 +18,17 @@
         <StackPanel>
             <Menu materialDesign:MenuAssist.TopLevelMenuItemHeight="25"
                   materialDesign:RippleAssist.IsDisabled="True">            <!-- クリック時のアニメーションを無効化 -->
-                <MenuItem Header="変換系(_C)" IsEnabled="False">
+                <MenuItem Header="{x:Static p:Resources.MenuConversion}"    IsEnabled="False">
                     <MenuItem Header="未実装"/>
                 </MenuItem>
-                <MenuItem Header="生成系(_G)" IsEnabled="False">
+                <MenuItem Header="{x:Static p:Resources.MenuGeneration}"    IsEnabled="False">
                     <MenuItem Header="未実装"/>
                 </MenuItem>
-                <MenuItem Header="マイコン/IC系(_M)" IsEnabled="False">
+                <MenuItem Header="{x:Static p:Resources.MenuMcuIc}"         IsEnabled="False">
                     <MenuItem Header="未実装"/>
                 </MenuItem>
-                <MenuItem Header="ヘルプ(_H)">
-                    <MenuItem Header="バージョン情報" Command="{Binding CommandTransitionView}" CommandParameter="UserControlAboutInfo"/>
+                <MenuItem Header="{x:Static p:Resources.MenuHelp}">
+                    <MenuItem Header="{x:Static p:Resources.MenuAboutInfo}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlAboutInfo"/>
                 </MenuItem>
             </Menu>
             <ContentControl prism:RegionManager.RegionName="ContentRegion" />
