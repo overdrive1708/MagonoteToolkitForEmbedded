@@ -1,42 +1,51 @@
-﻿<metro:MetroWindow x:Class="MagonoteToolkitForEmbedded.Views.MainWindow"
-                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                   xmlns:prism="http://prismlibrary.com/"
-                   xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
-                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-                   xmlns:p = "clr-namespace:MagonoteToolkitForEmbedded.Properties"
-                   prism:ViewModelLocator.AutoWireViewModel="True"
-                   d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
-                   mc:Ignorable="d"
-                   Title="{Binding Title}"
-                   Width="1280" Height="800"
-                   TitleCharacterCasing="Normal">
+﻿<metro:MetroWindow
+    x:Class="MagonoteToolkitForEmbedded.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:p="clr-namespace:MagonoteToolkitForEmbedded.Properties"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
+    Title="{Binding Title}"
+    Width="1280"
+    Height="800"
+    d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    TitleCharacterCasing="Normal"
+    mc:Ignorable="d">
     <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <DockPanel>
-                <Menu DockPanel.Dock="Top"
-                      materialDesign:MenuAssist.TopLevelMenuItemHeight="25"
-                      materialDesign:RippleAssist.IsDisabled="True">            <!-- クリック時のアニメーションを無効化 -->
-                    <MenuItem Header="{x:Static p:Resources.MenuConversion}"    IsEnabled="False">
-                        <MenuItem Header="未実装"/>
+                <Menu
+                    materialDesign:MenuAssist.TopLevelMenuItemHeight="25"
+                    materialDesign:RippleAssist.IsDisabled="True"
+                    DockPanel.Dock="Top">
+                    <MenuItem Header="{x:Static p:Resources.MenuConversion}" IsEnabled="False">
+                        <MenuItem Header="未実装" />
                     </MenuItem>
-                    <MenuItem Header="{x:Static p:Resources.MenuGeneration}"    IsEnabled="False">
-                        <MenuItem Header="未実装"/>
+                    <MenuItem Header="{x:Static p:Resources.MenuGeneration}" IsEnabled="False">
+                        <MenuItem Header="未実装" />
                     </MenuItem>
-                    <MenuItem Header="{x:Static p:Resources.MenuMcuIc}"         IsEnabled="False">
-                        <MenuItem Header="未実装"/>
+                    <MenuItem Header="{x:Static p:Resources.MenuMcuIc}" IsEnabled="False">
+                        <MenuItem Header="未実装" />
                     </MenuItem>
                     <MenuItem Header="{x:Static p:Resources.MenuComparison}">
-                        <MenuItem Header="{x:Static p:Resources.MenuComparisonDefinition}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlComparisonDefinition"/>
+                        <MenuItem
+                            Command="{Binding CommandTransitionView}"
+                            CommandParameter="UserControlComparisonDefinition"
+                            Header="{x:Static p:Resources.MenuComparisonDefinition}" />
                     </MenuItem>
                     <MenuItem Header="{x:Static p:Resources.MenuHelp}">
-                        <MenuItem Header="{x:Static p:Resources.MenuAboutInfo}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlAboutInfo"/>
+                        <MenuItem
+                            Command="{Binding CommandTransitionView}"
+                            CommandParameter="UserControlAboutInfo"
+                            Header="{x:Static p:Resources.MenuAboutInfo}" />
                     </MenuItem>
                 </Menu>
-                <ContentControl prism:RegionManager.RegionName="ContentRegion" HorizontalAlignment="Center"/>
+                <ContentControl HorizontalAlignment="Center" prism:RegionManager.RegionName="ContentRegion" />
             </DockPanel>
         </ScrollViewer>
     </Grid>

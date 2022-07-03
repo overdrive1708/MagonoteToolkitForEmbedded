@@ -1,98 +1,103 @@
-﻿<UserControl x:Class="MagonoteToolkitForEmbedded.Views.UserControlComparisonDefinition"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"
-             xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:p = "clr-namespace:MagonoteToolkitForEmbedded.Properties"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             prism:ViewModelLocator.AutoWireViewModel="True"
-             d:DataContext="{d:DesignInstance Type=viewmodels:UserControlComparisonDefinitionViewModel, IsDesignTimeCreatable=True}"
-             mc:Ignorable="d">
+﻿<UserControl
+    x:Class="MagonoteToolkitForEmbedded.Views.UserControlComparisonDefinition"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:MagonoteToolkitForEmbedded.Properties"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:UserControlComparisonDefinitionViewModel,
+                                     IsDesignTimeCreatable=True}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
     <Grid Margin="10,10,10,10">
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox
+                    Width="200"
+                    Height="500"
                     Margin="10,10,10,10"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Height="500" Width="200"
-                    AcceptsReturn="True"
-                    HorizontalScrollBarVisibility="Auto"
-                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionBefore}"
-                    materialDesign:HintAssist.FloatingScale="1.0"
+                    AcceptsReturn="True"
                     Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableCompare}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.BeforeDefines}"
-                    IsEnabled="{Binding IsEnableCompare}">
-                </TextBox>
+                    VerticalScrollBarVisibility="Auto" />
                 <TextBox
+                    Width="200"
+                    Height="500"
                     Margin="10,10,10,10"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Height="500" Width="200"
-                    AcceptsReturn="True"
-                    HorizontalScrollBarVisibility="Auto"
-                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionAfter}"
-                    materialDesign:HintAssist.FloatingScale="1.0"
+                    AcceptsReturn="True"
                     Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableCompare}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.AfterDefines}"
-                    IsEnabled="{Binding IsEnableCompare}">
-                </TextBox>
-                <materialDesign:PackIcon Kind="ArrowRight" VerticalAlignment="Center" Width="50" Height="50"/>
+                    VerticalScrollBarVisibility="Auto" />
+                <materialDesign:PackIcon
+                    Width="50"
+                    Height="50"
+                    VerticalAlignment="Center"
+                    Kind="ArrowRight" />
                 <TextBox
+                    Width="200"
+                    Height="500"
                     Margin="10,10,10,10"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Height="500" Width="200"
-                    AcceptsReturn="True"
-                    HorizontalScrollBarVisibility="Auto"
-                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionAdd}"
-                    materialDesign:HintAssist.FloatingScale="1.0"
+                    AcceptsReturn="True"
                     Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableCompare}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.AddDefines}"
-                    IsEnabled="{Binding IsEnableCompare}">
-                </TextBox>
+                    VerticalScrollBarVisibility="Auto" />
                 <TextBox
+                    Width="200"
+                    Height="500"
                     Margin="10,10,10,10"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Height="500" Width="200"
-                    AcceptsReturn="True"
-                    HorizontalScrollBarVisibility="Auto"
-                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionDelete}"
-                    materialDesign:HintAssist.FloatingScale="1.0"
-                    Cursor="Arrow"
-                    Text="{Binding DefineListData.DeleteDefines}"
-                    IsEnabled="{Binding IsEnableCompare}">
-                </TextBox>
-                <TextBox
-                    Margin="10,10,10,10"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Height="500" Width="200"
                     AcceptsReturn="True"
-                    HorizontalScrollBarVisibility="Auto"
-                    VerticalScrollBarVisibility="Auto"
-                    materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionChange}"
-                    materialDesign:HintAssist.FloatingScale="1.0"
                     Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableCompare}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    Text="{Binding DefineListData.DeleteDefines}"
+                    VerticalScrollBarVisibility="Auto" />
+                <TextBox
+                    Width="200"
+                    Height="500"
+                    Margin="10,10,10,10"
+                    materialDesign:HintAssist.FloatingScale="1.0"
+                    materialDesign:HintAssist.Hint="{x:Static p:Resources.ComparisonDefinitionChange}"
+                    AcceptsReturn="True"
+                    Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableCompare}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.ChangeDefines}"
-                    IsEnabled="{Binding IsEnableCompare}">
-                </TextBox>
+                    VerticalScrollBarVisibility="Auto" />
             </StackPanel>
             <Button
-                Margin="10,10,10,10"
                 Height="50"
-                Command="{Binding CommandCompare}"
-                Style="{StaticResource MaterialDesignOutlinedButton}"
-                Cursor="Hand"
-                Content="{Binding CompareState}"
-                materialDesign:ButtonProgressAssist.Minimum="0"
-                materialDesign:ButtonProgressAssist.Maximum="{Binding DefineListData.ProgressInfoData.Maximum}"
-                materialDesign:ButtonProgressAssist.Value="{Binding DefineListData.ProgressInfoData.Now}"
+                Margin="10,10,10,10"
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsProgressIndicatorVisible}"
-                IsEnabled="{Binding IsEnableCompare}">
-            </Button>
+                materialDesign:ButtonProgressAssist.Maximum="{Binding DefineListData.ProgressInfoData.Maximum}"
+                materialDesign:ButtonProgressAssist.Minimum="0"
+                materialDesign:ButtonProgressAssist.Value="{Binding DefineListData.ProgressInfoData.Now}"
+                Command="{Binding CommandCompare}"
+                Content="{Binding CompareState}"
+                Cursor="Hand"
+                IsEnabled="{Binding IsEnableCompare}"
+                Style="{StaticResource MaterialDesignOutlinedButton}" />
         </StackPanel>
     </Grid>
 </UserControl>
