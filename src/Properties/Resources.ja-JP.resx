@@ -164,4 +164,37 @@
   <data name="AboutInfoLibrariesBody" xml:space="preserve">
     <value>詳細は以下のURLを参照してください。</value>
   </data>
+  <data name="MenuComparison" xml:space="preserve">
+    <value>比較系(_D)</value>
+  </data>
+  <data name="MenuComparisonDefinition" xml:space="preserve">
+    <value>定義比較</value>
+  </data>
+  <data name="SubTitleComparisonDefinition" xml:space="preserve">
+    <value>定義比較</value>
+  </data>
+  <data name="ComparisonDefinitionAdd" xml:space="preserve">
+    <value>追加定義</value>
+  </data>
+  <data name="ComparisonDefinitionAfter" xml:space="preserve">
+    <value>変更後定義</value>
+  </data>
+  <data name="ComparisonDefinitionBefore" xml:space="preserve">
+    <value>変更前定義</value>
+  </data>
+  <data name="ComparisonDefinitionChange" xml:space="preserve">
+    <value>変更定義</value>
+  </data>
+  <data name="ComparisonDefinitionCompare" xml:space="preserve">
+    <value>比較実行</value>
+  </data>
+  <data name="ComparisonDefinitionDelete" xml:space="preserve">
+    <value>削除定義</value>
+  </data>
+  <data name="ComparisonDefinitionComplete" xml:space="preserve">
+    <value>完了しました｡</value>
+  </data>
+  <data name="ComparisonDefinitionProcessing" xml:space="preserve">
+    <value>処理中です｡</value>
+  </data>
 </root>

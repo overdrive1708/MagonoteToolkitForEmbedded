@@ -19,6 +19,9 @@ Software Development Toolkit for Embedded Software Development
 - ADF4111-Register calculation (to be implemented)
 - R2A20178NP-Register calculation (to be implemented)
 
+### Comparison system
+- Definition Comparison
+
 ## Requirements
 - [.NET Desktop Runtime 6.0.5](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 

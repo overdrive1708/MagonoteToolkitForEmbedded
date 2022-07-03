@@ -66,6 +66,9 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             // タイトルを更新する
             switch (viewname)
             {
+                case "UserControlComparisonDefinition":
+                    Title = $"{Properties.Resources.MainTitle} | {Properties.Resources.SubTitleComparisonDefinition}";
+                    break;
                 case "UserControlAboutInfo":
                     Title = $"{Properties.Resources.MainTitle} | {Properties.Resources.SubTitleAboutInfo}";
                     break;
