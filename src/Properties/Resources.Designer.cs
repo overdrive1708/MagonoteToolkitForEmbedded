@@ -116,6 +116,78 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Add に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionAdd {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   After に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionAfter {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionAfter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Before に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionBefore {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionBefore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Change に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionChange {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Compare に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionCompare {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Complete. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionComplete {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionDelete {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Now processing. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComparisonDefinitionProcessing {
+            get {
+                return ResourceManager.GetString("ComparisonDefinitionProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Magonote Toolkit For Embedded に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MainTitle {
@@ -130,6 +202,24 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string MenuAboutInfo {
             get {
                 return ResourceManager.GetString("MenuAboutInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Comparison(_D) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuComparison {
+            get {
+                return ResourceManager.GetString("MenuComparison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuComparisonDefinition {
+            get {
+                return ResourceManager.GetString("MenuComparisonDefinition", resourceCulture);
             }
         }
         
@@ -175,6 +265,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string SubTitleAboutInfo {
             get {
                 return ResourceManager.GetString("SubTitleAboutInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SubTitleComparisonDefinition {
+            get {
+                return ResourceManager.GetString("SubTitleComparisonDefinition", resourceCulture);
             }
         }
         

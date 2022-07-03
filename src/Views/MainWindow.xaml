@@ -15,23 +15,29 @@
                    Width="1280" Height="800"
                    TitleCharacterCasing="Normal">
     <Grid>
-        <StackPanel>
-            <Menu materialDesign:MenuAssist.TopLevelMenuItemHeight="25"
-                  materialDesign:RippleAssist.IsDisabled="True">            <!-- クリック時のアニメーションを無効化 -->
-                <MenuItem Header="{x:Static p:Resources.MenuConversion}"    IsEnabled="False">
-                    <MenuItem Header="未実装"/>
-                </MenuItem>
-                <MenuItem Header="{x:Static p:Resources.MenuGeneration}"    IsEnabled="False">
-                    <MenuItem Header="未実装"/>
-                </MenuItem>
-                <MenuItem Header="{x:Static p:Resources.MenuMcuIc}"         IsEnabled="False">
-                    <MenuItem Header="未実装"/>
-                </MenuItem>
-                <MenuItem Header="{x:Static p:Resources.MenuHelp}">
-                    <MenuItem Header="{x:Static p:Resources.MenuAboutInfo}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlAboutInfo"/>
-                </MenuItem>
-            </Menu>
-            <ContentControl prism:RegionManager.RegionName="ContentRegion" />
-        </StackPanel>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top"
+                      materialDesign:MenuAssist.TopLevelMenuItemHeight="25"
+                      materialDesign:RippleAssist.IsDisabled="True">            <!-- クリック時のアニメーションを無効化 -->
+                    <MenuItem Header="{x:Static p:Resources.MenuConversion}"    IsEnabled="False">
+                        <MenuItem Header="未実装"/>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuGeneration}"    IsEnabled="False">
+                        <MenuItem Header="未実装"/>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuMcuIc}"         IsEnabled="False">
+                        <MenuItem Header="未実装"/>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuComparison}">
+                        <MenuItem Header="{x:Static p:Resources.MenuComparisonDefinition}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlComparisonDefinition"/>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuHelp}">
+                        <MenuItem Header="{x:Static p:Resources.MenuAboutInfo}" Command="{Binding CommandTransitionView}" CommandParameter="UserControlAboutInfo"/>
+                    </MenuItem>
+                </Menu>
+                <ContentControl prism:RegionManager.RegionName="ContentRegion" HorizontalAlignment="Center"/>
+            </DockPanel>
+        </ScrollViewer>
     </Grid>
 </metro:MetroWindow>

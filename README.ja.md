@@ -20,6 +20,9 @@
 - ADF4111-レジスタ計算(実装予定)
 - R2A20178NP-レジスタ計算(実装予定)
 
+### 比較系
+- 定義比較
+
 ## 必要要件
 - [.NET デスクトップ ランタイム 6.0.5](https://dotnet.microsoft.com/ja-jp/download/dotnet/6.0)
 
