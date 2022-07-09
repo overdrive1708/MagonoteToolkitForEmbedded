@@ -7,7 +7,11 @@
     <Authors>overdrive1708</Authors>
     <Copyright>Copyright © 2022 overdrive1708</Copyright>
     <PackageProjectUrl>https://github.com/overdrive1708/MagonoteToolkitForEmbedded</PackageProjectUrl>
+    <ApplicationIcon>Images\ApplicationIcon.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Images\ApplicationIcon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.4.9" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
