@@ -22,6 +22,12 @@ Software Development Toolkit for Embedded Software Development
 ### Comparison system
 - Definition Comparison
 
+## How to install
+- Run setup.exe.
+
+## How to uninstall
+- Select "MagonoteToolkitForEmbedded" from "Add or Remove Programs (Apps and Features)" and uninstall it.
+
 ## Requirements
 - [.NET Desktop Runtime 6.0.5](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
