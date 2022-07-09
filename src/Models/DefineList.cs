@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Prism.Mvvm;
 
@@ -23,9 +25,46 @@ namespace MagonoteToolkitForEmbedded.Models
             /// </summary>
             General,
             /// <summary>
-            /// C言語モード
+            /// C言語define比較モード
             /// </summary>
-            C
+            ClangDefine
+        }
+
+        /// <summary>
+        /// 変更定義情報
+        /// </summary>
+        public class ChangeInfo
+        {
+            /// <summary>
+            /// 定義名
+            /// </summary>
+            public string Define { get; set; } = string.Empty;
+
+            /// <summary>
+            /// 変更前定義値
+            /// </summary>
+            public string BeforeValue { get; set; } = string.Empty;
+
+            /// <summary>
+            /// 変更後定義値
+            /// </summary>
+            public string AfterValue { get; set; } = string.Empty;
+        }
+
+        /// <summary>
+        /// 定義情報
+        /// </summary>
+        public class DefineInfo
+        {
+            /// <summary>
+            /// 定義名
+            /// </summary>
+            public string Define { get; set; } = string.Empty;
+
+            /// <summary>
+            /// 定義値
+            /// </summary>
+            public string Value { get; set; } = string.Empty;
         }
 
         //--------------------------------------------------
@@ -84,8 +123,8 @@ namespace MagonoteToolkitForEmbedded.Models
         /// <summary>
         /// 変更定義
         /// </summary>
-        private string _changeDefines = string.Empty;
-        public string ChangeDefines
+        private ObservableCollection<ChangeInfo> _changeDefines = new();
+        public ObservableCollection<ChangeInfo> ChangeDefines
         {
             get { return _changeDefines; }
             set { SetProperty(ref _changeDefines, value); }
@@ -97,12 +136,12 @@ namespace MagonoteToolkitForEmbedded.Models
         /// <summary>
         /// 変更前定義リスト
         /// </summary>
-        private List<string> _beforeDefineList = new();
+        private List<DefineInfo> _beforeDefineList = new();
 
         /// <summary>
         /// 変更後定義リスト
         /// </summary>
-        private List<string> _afterDefineList = new();
+        private List<DefineInfo> _afterDefineList = new();
 
         //--------------------------------------------------
         // メソッド
@@ -125,15 +164,19 @@ namespace MagonoteToolkitForEmbedded.Models
 
             AddDefines = string.Empty;
             DeleteDefines = string.Empty;
+            ChangeDefines.Clear();
 
             CreateBeforeDefineList(compareMode);
             CreateAfterDefineList(compareMode);
 
-            ProgressInfoData.Maximum = _beforeDefineList.Count + _afterDefineList.Count;
+            ProgressInfoData.Maximum = _beforeDefineList.Count + _afterDefineList.Count + _afterDefineList.Count;
 
             CheckAddDefine();
             CheckDeleteDefine();
-            // TODO:C言語モードの場合は定義値の比較を行う｡C言語モードを実装するときは､定義リストは値を考慮したクラスに変更する｡
+            if(compareMode == CompareMode.ClangDefine)
+            {
+                CheckChangeDefine();
+            }
         }
 
         /// <summary>
@@ -148,16 +191,26 @@ namespace MagonoteToolkitForEmbedded.Models
 
             foreach (string define in defines)
             {
-                string addstr = define;
+                DefineInfo addlist = new();
 
-                if (compareMode == CompareMode.General)
+                if (compareMode == CompareMode.ClangDefine)
                 {
-                    addstr = Regex.Replace(addstr, "[^a-zA-Z0-9_]", String.Empty);
+                    Match match = Regex.Match(define, @"#define[\t ]*(?<definename>[^\t ]*)[\t ]*(?<definevalue>[^\t /]*)");
+                    if (match.Success)
+                    {
+                        addlist.Define = match.Result("${definename}");
+                        addlist.Value = match.Result("${definevalue}");
+                    }
+                }
+                else
+                {
+                    addlist.Define = Regex.Replace(define, "[^a-zA-Z0-9_]", string.Empty);
+                    addlist.Value = string.Empty;
                 }
 
-                if (!_beforeDefineList.Contains(addstr))
+                if (!_beforeDefineList.Any(item => item.Define == addlist.Define && item.Value == addlist.Value))
                 {
-                    _beforeDefineList.Add(addstr);
+                    _beforeDefineList.Add(addlist);
                 }
             }
         }
@@ -174,16 +227,26 @@ namespace MagonoteToolkitForEmbedded.Models
 
             foreach (string define in defines)
             {
-                string addstr = define;
+                DefineInfo addlist = new();
 
-                if (compareMode == CompareMode.General)
+                if (compareMode == CompareMode.ClangDefine)
                 {
-                    addstr = Regex.Replace(addstr, "[^a-zA-Z0-9_]", string.Empty);
+                    Match match = Regex.Match(define, @"#define[\t ]*(?<definename>[^\t ]*)[\t ]*(?<definevalue>[^\t /]*)");
+                    if (match.Success)
+                    {
+                        addlist.Define = match.Result("${definename}");
+                        addlist.Value = match.Result("${definevalue}");
+                    }
+                }
+                else
+                {
+                    addlist.Define = Regex.Replace(define, "[^a-zA-Z0-9_]", string.Empty);
+                    addlist.Value = string.Empty;
                 }
 
-                if (!_afterDefineList.Contains(addstr))
+                if (!_afterDefineList.Any(item => item.Define == addlist.Define && item.Value == addlist.Value))
                 {
-                    _afterDefineList.Add(addstr);
+                    _afterDefineList.Add(addlist);
                 }
             }
         }
@@ -193,11 +256,11 @@ namespace MagonoteToolkitForEmbedded.Models
         /// </summary>
         private void CheckAddDefine()
         {
-            foreach (string define in _afterDefineList)
+            foreach (DefineInfo defineinfo in _afterDefineList)
             {
-                if (!_beforeDefineList.Contains(define))
+                if (!_beforeDefineList.Any(item => item.Define == defineinfo.Define))
                 {
-                    AddDefines = $"{AddDefines}{define}\r\n";
+                    AddDefines = $"{AddDefines}{defineinfo.Define}\r\n";
                 }
                 ProgressInfoData.CountUp();
             }
@@ -208,11 +271,33 @@ namespace MagonoteToolkitForEmbedded.Models
         /// </summary>
         private void CheckDeleteDefine()
         {
-            foreach (string define in _beforeDefineList)
+            foreach (DefineInfo defineinfo in _beforeDefineList)
             {
-                if (!_afterDefineList.Contains(define))
+                if (!_afterDefineList.Any(item => item.Define == defineinfo.Define))
                 {
-                    DeleteDefines = $"{DeleteDefines}{define}\r\n";
+                    DeleteDefines = $"{DeleteDefines}{defineinfo.Define}\r\n";
+                }
+                ProgressInfoData.CountUp();
+            }
+        }
+
+        /// <summary>
+        /// 変更定義のチェック処理
+        /// </summary>
+        private void CheckChangeDefine()
+        {
+            foreach (DefineInfo afterDefineInfo in _afterDefineList)
+            {
+                DefineInfo beforeDefineInfo = _beforeDefineList.FirstOrDefault(item => item.Define == afterDefineInfo.Define && item.Value != afterDefineInfo.Value);
+                if (beforeDefineInfo != null)
+                {
+                    ChangeInfo changeinfo = new()
+                    {
+                        Define = afterDefineInfo.Define,
+                        BeforeValue = beforeDefineInfo.Value,
+                        AfterValue = afterDefineInfo.Value
+                    };
+                    ChangeDefines.Add(changeinfo);
                 }
                 ProgressInfoData.CountUp();
             }

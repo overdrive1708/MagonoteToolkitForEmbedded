@@ -191,4 +191,13 @@ Please select a tool from the menu.</value>
   <data name="MessageWelcomeTitle" xml:space="preserve">
     <value>Welcome to "Magonote Toolkit For Embedded"!</value>
   </data>
+  <data name="AfterValue" xml:space="preserve">
+    <value>After Value</value>
+  </data>
+  <data name="BeforeValue" xml:space="preserve">
+    <value>Before Value</value>
+  </data>
+  <data name="CompareClangDefines" xml:space="preserve">
+    <value>Compare C language defines</value>
+  </data>
 </root>

@@ -191,4 +191,13 @@
   <data name="MessageProcessing" xml:space="preserve">
     <value>処理中です｡</value>
   </data>
+  <data name="CompareClangDefines" xml:space="preserve">
+    <value>C言語のdefineを比較する</value>
+  </data>
+  <data name="AfterValue" xml:space="preserve">
+    <value>変更後の値</value>
+  </data>
+  <data name="BeforeValue" xml:space="preserve">
+    <value>変更前の値</value>
+  </data>
 </root>
