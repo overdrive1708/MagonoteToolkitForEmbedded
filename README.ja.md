@@ -23,6 +23,12 @@
 ### 比較系
 - 定義比較
 
+## インストール方法
+- setup.exeを実行してください｡
+
+## アンインストール方法
+- プログラムの追加と削除(アプリと機能)から｢MagonoteToolkitForEmbedded｣を選択してアンインストールしてください｡
+
 ## 必要要件
 - [.NET デスクトップ ランタイム 6.0.5](https://dotnet.microsoft.com/ja-jp/download/dotnet/6.0)
 
