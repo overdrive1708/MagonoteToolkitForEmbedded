@@ -10,6 +10,16 @@
     <ApplicationIcon>Images\ApplicationIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Installer\**" />
+    <Compile Remove="publish\**" />
+    <EmbeddedResource Remove="Installer\**" />
+    <EmbeddedResource Remove="publish\**" />
+    <None Remove="Installer\**" />
+    <None Remove="publish\**" />
+    <Page Remove="Installer\**" />
+    <Page Remove="publish\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\ApplicationIcon.ico" />
   </ItemGroup>
   <ItemGroup>
