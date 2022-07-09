@@ -79,6 +79,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   After Value に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AfterValue {
+            get {
+                return ResourceManager.GetString("AfterValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Magonote Toolkit For Embedded に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ApplicationTitle {
@@ -97,6 +106,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Before Value に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BeforeValue {
+            get {
+                return ResourceManager.GetString("BeforeValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Change definition に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ChangeDefinition {
@@ -111,6 +129,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string Compare {
             get {
                 return ResourceManager.GetString("Compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Compare C language defines に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CompareClangDefines {
+            get {
+                return ResourceManager.GetString("CompareClangDefines", resourceCulture);
             }
         }
         

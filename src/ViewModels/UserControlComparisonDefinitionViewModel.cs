@@ -4,6 +4,8 @@ using System.Windows.Threading;
 using Prism.Mvvm;
 using Prism.Commands;
 using MagonoteToolkitForEmbedded.Models;
+using System.Windows;
+using System.Windows.Data;
 
 namespace MagonoteToolkitForEmbedded.ViewModels
 {
@@ -52,6 +54,36 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             set { SetProperty(ref _isProgressIndicatorVisible, value); }
         }
 
+        /// <summary>
+        /// C言語define比較フラグ
+        /// </summary>
+        private bool _isClangDefineMode;
+        public bool IsClangDefineMode
+        {
+            get { return _isClangDefineMode; }
+            set { SetProperty(ref _isClangDefineMode, value); }
+        }
+
+        /// <summary>
+        /// 変更定義表示フラグ
+        /// </summary>
+        private Visibility _changeDefineListVisibility = Visibility.Collapsed;
+        public Visibility ChangeDefineListVisibility
+        {
+            get { return _changeDefineListVisibility; }
+            set { SetProperty(ref _changeDefineListVisibility, value); }
+        }
+
+        /// <summary>
+        /// 定義リストの高さ
+        /// </summary>
+        private int _defineListHeight = 500;
+        public int DefineListHeight
+        {
+            get { return _defineListHeight; }
+            set { SetProperty(ref _defineListHeight, value); }
+        }
+
         //--------------------------------------------------
         // バインディングコマンド(スニペット:cmd/cmdg)
         //--------------------------------------------------
@@ -61,6 +93,13 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         private DelegateCommand _commandCompare;
         public DelegateCommand CommandCompare =>
             _commandCompare ?? (_commandCompare = new DelegateCommand(ExecuteCommandCompare));
+
+        /// <summary>
+        /// C言語define比較チェックボックス変更コマンド
+        /// </summary>
+        private DelegateCommand _commandChangeClangDefineMode;
+        public DelegateCommand CommandChangeClangDefineMode =>
+            _commandChangeClangDefineMode ?? (_commandChangeClangDefineMode = new DelegateCommand(ExecuteCommandChangeClangDefineMode));
 
         //--------------------------------------------------
         // 内部変数
@@ -83,6 +122,8 @@ namespace MagonoteToolkitForEmbedded.ViewModels
                 Interval = new TimeSpan(0, 0, 1)
             };
             _timerCompareEnableWait.Tick += new EventHandler(TimeoutCompareEnableWait);
+
+            BindingOperations.EnableCollectionSynchronization(DefineListData.ChangeDefines, new object());
         }
 
         /// <summary>
@@ -97,7 +138,14 @@ namespace MagonoteToolkitForEmbedded.ViewModels
 
             await Task.Run(() =>
             {
-                DefineListData.Compare(DefineList.CompareMode.General);
+                if (IsClangDefineMode)
+                {
+                    DefineListData.Compare(DefineList.CompareMode.ClangDefine);
+                }
+                else
+                {
+                    DefineListData.Compare(DefineList.CompareMode.General);
+                }
             });
 
             CompareState = Properties.Resources.MessageComplete;
@@ -119,6 +167,23 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             CompareState = Properties.Resources.Compare;
 
             IsEnableCompare = true;
+        }
+
+        /// <summary>
+        /// C言語define比較チェックボックス変更コマンド実行処理
+        /// </summary>
+        private void ExecuteCommandChangeClangDefineMode()
+        {
+            if (IsClangDefineMode)
+            {
+                ChangeDefineListVisibility = Visibility.Visible;
+                DefineListHeight = 300;
+            }
+            else
+            {
+                ChangeDefineListVisibility = Visibility.Collapsed;
+                DefineListHeight = 500;
+            }
         }
     }
 }

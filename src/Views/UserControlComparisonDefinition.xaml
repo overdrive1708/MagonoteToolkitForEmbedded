@@ -12,12 +12,19 @@
                                      IsDesignTimeCreatable=True}"
     prism:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
-    <Grid Margin="10,10,10,10">
+    <Grid Margin="10,10,10,0">
         <StackPanel>
+            <CheckBox
+                Margin="10,10,10,10"
+                Command="{Binding CommandChangeClangDefineMode}"
+                Content="{x:Static p:Resources.CompareClangDefines}"
+                IsChecked="{Binding IsClangDefineMode}"
+                IsEnabled="{Binding IsEnableCompare}"
+                Style="{StaticResource MaterialDesignCheckBox}" />
             <StackPanel Orientation="Horizontal">
                 <TextBox
                     Width="200"
-                    Height="500"
+                    Height="{Binding DefineListHeight}"
                     Margin="10,10,10,10"
                     materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.BeforeDefinition}"
@@ -30,7 +37,7 @@
                     VerticalScrollBarVisibility="Auto" />
                 <TextBox
                     Width="200"
-                    Height="500"
+                    Height="{Binding DefineListHeight}"
                     Margin="10,10,10,10"
                     materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.AfterDefinition}"
@@ -48,7 +55,7 @@
                     Kind="ArrowRight" />
                 <TextBox
                     Width="200"
-                    Height="500"
+                    Height="{Binding DefineListHeight}"
                     Margin="10,10,10,10"
                     materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.AddDefinition}"
@@ -61,7 +68,7 @@
                     VerticalScrollBarVisibility="Auto" />
                 <TextBox
                     Width="200"
-                    Height="500"
+                    Height="{Binding DefineListHeight}"
                     Margin="10,10,10,10"
                     materialDesign:HintAssist.FloatingScale="1.0"
                     materialDesign:HintAssist.Hint="{x:Static p:Resources.DeleteDefinition}"
@@ -72,20 +79,25 @@
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.DeleteDefines}"
                     VerticalScrollBarVisibility="Auto" />
-                <TextBox
-                    Width="200"
-                    Height="500"
-                    Margin="10,10,10,10"
-                    materialDesign:HintAssist.FloatingScale="1.0"
-                    materialDesign:HintAssist.Hint="{x:Static p:Resources.ChangeDefinition}"
-                    AcceptsReturn="True"
-                    Cursor="Arrow"
-                    HorizontalScrollBarVisibility="Auto"
-                    IsEnabled="{Binding IsEnableCompare}"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    Text="{Binding DefineListData.ChangeDefines}"
-                    VerticalScrollBarVisibility="Auto" />
             </StackPanel>
+            <DataGrid
+                Height="250"
+                Margin="10,10,10,10"
+                materialDesign:DataGridAssist.CellPadding="4 2 2 2"
+                materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2"
+                AutoGenerateColumns="False"
+                CanUserSortColumns="False"
+                HeadersVisibility="Column"
+                IsEnabled="{Binding IsEnableCompare}"
+                IsReadOnly="True"
+                ItemsSource="{Binding DefineListData.ChangeDefines}"
+                Visibility="{Binding ChangeDefineListVisibility}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Define}" Header="{x:Static p:Resources.ChangeDefinition}" />
+                    <DataGridTextColumn Binding="{Binding Path=BeforeValue}" Header="{x:Static p:Resources.BeforeValue}" />
+                    <DataGridTextColumn Binding="{Binding Path=AfterValue}" Header="{x:Static p:Resources.AfterValue}" />
+                </DataGrid.Columns>
+            </DataGrid>
             <Button
                 Height="50"
                 Margin="10,10,10,10"
