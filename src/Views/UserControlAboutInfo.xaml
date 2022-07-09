@@ -13,11 +13,11 @@
     mc:Ignorable="d">
     <Grid Margin="10,10,10,10">
         <StackPanel>
-            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.AboutInfoProductTitle}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.ProductName}" />
             <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding ProductBody}" />
-            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.AboutInfoVersionTitle}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.Version}" />
             <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding VersionBody}" />
-            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.AboutInfoLicenseTitle}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.License}" />
             <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding LicenseBody}" />
             <TextBlock>
                 <Hyperlink
@@ -27,8 +27,8 @@
                     https://github.com/overdrive1708/MagonoteToolkitForEmbedded/blob/main/LICENSE
                 </Hyperlink>
             </TextBlock>
-            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.AboutInfoLibrariesTitle}" />
-            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{x:Static p:Resources.AboutInfoLibrariesBody}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.LibrariesUsed}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{x:Static p:Resources.MessageAboutInfoLibrariesBody}" />
             <TextBlock>
                 <Hyperlink
                     Command="{Binding CommandTransitionView}"

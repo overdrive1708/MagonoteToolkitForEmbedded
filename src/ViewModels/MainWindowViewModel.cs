@@ -12,7 +12,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         /// <summary>
         /// タイトル
         /// </summary>
-        private string _title = Properties.Resources.MainTitle;
+        private string _title = Properties.Resources.ApplicationTitle;
         public string Title
         {
             get { return _title; }
@@ -67,10 +67,10 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             switch (viewname)
             {
                 case "UserControlComparisonDefinition":
-                    Title = $"{Properties.Resources.MainTitle} | {Properties.Resources.SubTitleComparisonDefinition}";
+                    Title = $"{Properties.Resources.ApplicationTitle} | {Properties.Resources.ViewTitleComparisonDefinition}";
                     break;
                 case "UserControlAboutInfo":
-                    Title = $"{Properties.Resources.MainTitle} | {Properties.Resources.SubTitleAboutInfo}";
+                    Title = $"{Properties.Resources.ApplicationTitle} | {Properties.Resources.ViewTitleAboutInfo}";
                     break;
                 default:
                     break;

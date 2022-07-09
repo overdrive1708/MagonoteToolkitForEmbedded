@@ -66,7 +66,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
 
                 VersionBody = assm.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
 
-                LicenseBody = $"{assm.GetCustomAttribute<AssemblyCopyrightAttribute>().Copyright}\r\n{Properties.Resources.AboutInfoLicenseBody}";
+                LicenseBody = $"{assm.GetCustomAttribute<AssemblyCopyrightAttribute>().Copyright}\r\n{Properties.Resources.MessageAboutInfoLicenseBody}";
             }
         }
 

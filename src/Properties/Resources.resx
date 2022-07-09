@@ -117,60 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutInfoLibrariesBody" xml:space="preserve">
+  <data name="MessageAboutInfoLibrariesBody" xml:space="preserve">
     <value>See the following URL for details.</value>
   </data>
-  <data name="AboutInfoLibrariesTitle" xml:space="preserve">
+  <data name="LibrariesUsed" xml:space="preserve">
     <value>Libraries used</value>
   </data>
-  <data name="AboutInfoLicenseBody" xml:space="preserve">
+  <data name="MessageAboutInfoLicenseBody" xml:space="preserve">
     <value>This software is licensed under the MIT License.
 See the following URL for details.</value>
   </data>
-  <data name="AboutInfoLicenseTitle" xml:space="preserve">
+  <data name="License" xml:space="preserve">
     <value>License</value>
   </data>
-  <data name="AboutInfoProductTitle" xml:space="preserve">
+  <data name="ProductName" xml:space="preserve">
     <value>Product name</value>
   </data>
-  <data name="AboutInfoVersionTitle" xml:space="preserve">
+  <data name="Version" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="ComparisonDefinitionAdd" xml:space="preserve">
-    <value>Add</value>
+  <data name="AddDefinition" xml:space="preserve">
+    <value>Add definition</value>
   </data>
-  <data name="ComparisonDefinitionAfter" xml:space="preserve">
-    <value>After</value>
+  <data name="AfterDefinition" xml:space="preserve">
+    <value>After definition</value>
   </data>
-  <data name="ComparisonDefinitionBefore" xml:space="preserve">
-    <value>Before</value>
+  <data name="BeforeDefinition" xml:space="preserve">
+    <value>Before definition</value>
   </data>
-  <data name="ComparisonDefinitionChange" xml:space="preserve">
-    <value>Change</value>
+  <data name="ChangeDefinition" xml:space="preserve">
+    <value>Change definition</value>
   </data>
-  <data name="ComparisonDefinitionCompare" xml:space="preserve">
+  <data name="Compare" xml:space="preserve">
     <value>Compare</value>
   </data>
-  <data name="ComparisonDefinitionComplete" xml:space="preserve">
+  <data name="MessageComplete" xml:space="preserve">
     <value>Complete.</value>
   </data>
-  <data name="ComparisonDefinitionDelete" xml:space="preserve">
-    <value>Delete</value>
+  <data name="DeleteDefinition" xml:space="preserve">
+    <value>Delete definition</value>
   </data>
-  <data name="ComparisonDefinitionProcessing" xml:space="preserve">
+  <data name="MessageProcessing" xml:space="preserve">
     <value>Now processing.</value>
   </data>
-  <data name="MainTitle" xml:space="preserve">
+  <data name="ApplicationTitle" xml:space="preserve">
     <value>Magonote Toolkit For Embedded</value>
-  </data>
-  <data name="MenuAboutInfo" xml:space="preserve">
-    <value>AboutInfo</value>
   </data>
   <data name="MenuComparison" xml:space="preserve">
     <value>Comparison(_D)</value>
-  </data>
-  <data name="MenuComparisonDefinition" xml:space="preserve">
-    <value>Definition Comparison</value>
   </data>
   <data name="MenuConversion" xml:space="preserve">
     <value>Conversion(_C)</value>
@@ -184,17 +178,17 @@ See the following URL for details.</value>
   <data name="MenuMcuIc" xml:space="preserve">
     <value>MCU&amp;IC(_M)</value>
   </data>
-  <data name="SubTitleAboutInfo" xml:space="preserve">
+  <data name="ViewTitleAboutInfo" xml:space="preserve">
     <value>AboutInfo</value>
   </data>
-  <data name="SubTitleComparisonDefinition" xml:space="preserve">
+  <data name="ViewTitleComparisonDefinition" xml:space="preserve">
     <value>Definition Comparison</value>
   </data>
-  <data name="WelcomeMessageBody" xml:space="preserve">
+  <data name="MessageWelcomeBody" xml:space="preserve">
     <value>This toolkit is a collection of useful tools for embedded software development.
 Please select a tool from the menu.</value>
   </data>
-  <data name="WelcomeMessageTitle" xml:space="preserve">
+  <data name="MessageWelcomeTitle" xml:space="preserve">
     <value>Welcome to "Magonote Toolkit For Embedded"!</value>
   </data>
 </root>

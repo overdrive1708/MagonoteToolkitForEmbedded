@@ -13,8 +13,8 @@
     mc:Ignorable="d">
     <Grid Margin="10,10,10,10">
         <StackPanel>
-            <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}" Text="{x:Static p:Resources.WelcomeMessageTitle}" />
-            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.WelcomeMessageBody}" />
+            <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}" Text="{x:Static p:Resources.MessageWelcomeTitle}" />
+            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{x:Static p:Resources.MessageWelcomeBody}" />
         </StackPanel>
     </Grid>
 </UserControl>

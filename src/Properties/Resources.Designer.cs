@@ -61,147 +61,83 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
-        ///   See the following URL for details. に類似しているローカライズされた文字列を検索します。
+        ///   Add definition に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string AboutInfoLibrariesBody {
+        public static string AddDefinition {
             get {
-                return ResourceManager.GetString("AboutInfoLibrariesBody", resourceCulture);
+                return ResourceManager.GetString("AddDefinition", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Libraries used に類似しているローカライズされた文字列を検索します。
+        ///   After definition に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string AboutInfoLibrariesTitle {
+        public static string AfterDefinition {
             get {
-                return ResourceManager.GetString("AboutInfoLibrariesTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   This software is licensed under the MIT License.
-        ///See the following URL for details. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string AboutInfoLicenseBody {
-            get {
-                return ResourceManager.GetString("AboutInfoLicenseBody", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   License に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string AboutInfoLicenseTitle {
-            get {
-                return ResourceManager.GetString("AboutInfoLicenseTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Product name に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string AboutInfoProductTitle {
-            get {
-                return ResourceManager.GetString("AboutInfoProductTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Version に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string AboutInfoVersionTitle {
-            get {
-                return ResourceManager.GetString("AboutInfoVersionTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Add に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionAdd {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionAdd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   After に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionAfter {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionAfter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Before に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionBefore {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionBefore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Change に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionChange {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionChange", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Compare に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionCompare {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionCompare", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Complete. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionComplete {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionComplete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Delete に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionDelete {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Now processing. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ComparisonDefinitionProcessing {
-            get {
-                return ResourceManager.GetString("ComparisonDefinitionProcessing", resourceCulture);
+                return ResourceManager.GetString("AfterDefinition", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Magonote Toolkit For Embedded に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string MainTitle {
+        public static string ApplicationTitle {
             get {
-                return ResourceManager.GetString("MainTitle", resourceCulture);
+                return ResourceManager.GetString("ApplicationTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   AboutInfo に類似しているローカライズされた文字列を検索します。
+        ///   Before definition に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string MenuAboutInfo {
+        public static string BeforeDefinition {
             get {
-                return ResourceManager.GetString("MenuAboutInfo", resourceCulture);
+                return ResourceManager.GetString("BeforeDefinition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Change definition に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChangeDefinition {
+            get {
+                return ResourceManager.GetString("ChangeDefinition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Compare に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Compare {
+            get {
+                return ResourceManager.GetString("Compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete definition に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DeleteDefinition {
+            get {
+                return ResourceManager.GetString("DeleteDefinition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Libraries used に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LibrariesUsed {
+            get {
+                return ResourceManager.GetString("LibrariesUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string License {
+            get {
+                return ResourceManager.GetString("License", resourceCulture);
             }
         }
         
@@ -211,15 +147,6 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string MenuComparison {
             get {
                 return ResourceManager.GetString("MenuComparison", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string MenuComparisonDefinition {
-            get {
-                return ResourceManager.GetString("MenuComparisonDefinition", resourceCulture);
             }
         }
         
@@ -260,20 +187,39 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
-        ///   AboutInfo に類似しているローカライズされた文字列を検索します。
+        ///   See the following URL for details. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string SubTitleAboutInfo {
+        public static string MessageAboutInfoLibrariesBody {
             get {
-                return ResourceManager.GetString("SubTitleAboutInfo", resourceCulture);
+                return ResourceManager.GetString("MessageAboutInfoLibrariesBody", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
+        ///   This software is licensed under the MIT License.
+        ///See the following URL for details. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string SubTitleComparisonDefinition {
+        public static string MessageAboutInfoLicenseBody {
             get {
-                return ResourceManager.GetString("SubTitleComparisonDefinition", resourceCulture);
+                return ResourceManager.GetString("MessageAboutInfoLicenseBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Complete. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageComplete {
+            get {
+                return ResourceManager.GetString("MessageComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Now processing. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageProcessing {
+            get {
+                return ResourceManager.GetString("MessageProcessing", resourceCulture);
             }
         }
         
@@ -281,18 +227,54 @@ namespace MagonoteToolkitForEmbedded.Properties {
         ///   This toolkit is a collection of useful tools for embedded software development.
         ///Please select a tool from the menu. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string WelcomeMessageBody {
+        public static string MessageWelcomeBody {
             get {
-                return ResourceManager.GetString("WelcomeMessageBody", resourceCulture);
+                return ResourceManager.GetString("MessageWelcomeBody", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Welcome to &quot;Magonote Toolkit For Embedded&quot;! に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string WelcomeMessageTitle {
+        public static string MessageWelcomeTitle {
             get {
-                return ResourceManager.GetString("WelcomeMessageTitle", resourceCulture);
+                return ResourceManager.GetString("MessageWelcomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Product name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProductName {
+            get {
+                return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Version {
+            get {
+                return ResourceManager.GetString("Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   AboutInfo に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewTitleAboutInfo {
+            get {
+                return ResourceManager.GetString("ViewTitleAboutInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewTitleComparisonDefinition {
+            get {
+                return ResourceManager.GetString("ViewTitleComparisonDefinition", resourceCulture);
             }
         }
     }
