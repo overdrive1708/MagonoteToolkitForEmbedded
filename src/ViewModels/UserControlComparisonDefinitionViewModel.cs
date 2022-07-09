@@ -25,7 +25,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         /// <summary>
         /// 比較実行ボタンテキスト
         /// </summary>
-        private string _compareState = Properties.Resources.ComparisonDefinitionCompare;
+        private string _compareState = Properties.Resources.Compare;
         public string CompareState
         {
             get { return _compareState; }
@@ -93,14 +93,14 @@ namespace MagonoteToolkitForEmbedded.ViewModels
             IsEnableCompare = false;
             IsProgressIndicatorVisible = true;
 
-            CompareState = Properties.Resources.ComparisonDefinitionProcessing;
+            CompareState = Properties.Resources.MessageProcessing;
 
             await Task.Run(() =>
             {
                 DefineListData.Compare(DefineList.CompareMode.General);
             });
 
-            CompareState = Properties.Resources.ComparisonDefinitionComplete;
+            CompareState = Properties.Resources.MessageComplete;
 
             IsProgressIndicatorVisible = false;
 
@@ -116,7 +116,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         {
             _timerCompareEnableWait.Stop();
 
-            CompareState = Properties.Resources.ComparisonDefinitionCompare;
+            CompareState = Properties.Resources.Compare;
 
             IsEnableCompare = true;
         }

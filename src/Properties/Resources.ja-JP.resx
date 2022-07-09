@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MainTitle" xml:space="preserve">
+  <data name="ApplicationTitle" xml:space="preserve">
     <value>Magonote Toolkit For Embedded</value>
   </data>
-  <data name="SubTitleAboutInfo" xml:space="preserve">
-    <value>このソフトウェアについて</value>
-  </data>
-  <data name="MenuAboutInfo" xml:space="preserve">
+  <data name="ViewTitleAboutInfo" xml:space="preserve">
     <value>このソフトウェアについて</value>
   </data>
   <data name="MenuConversion" xml:space="preserve">
@@ -138,63 +135,60 @@
   <data name="MenuHelp" xml:space="preserve">
     <value>ヘルプ(_H)</value>
   </data>
-  <data name="WelcomeMessageTitle" xml:space="preserve">
+  <data name="MessageWelcomeTitle" xml:space="preserve">
     <value>｢Magonote Toolkit For Embedded｣へようこそ!</value>
   </data>
-  <data name="WelcomeMessageBody" xml:space="preserve">
+  <data name="MessageWelcomeBody" xml:space="preserve">
     <value>このツールは組み込みソフトウェア開発に便利なツールを集めたツールキットです｡
 メニューからツールを選んでください｡</value>
   </data>
-  <data name="AboutInfoLibrariesTitle" xml:space="preserve">
+  <data name="LibrariesUsed" xml:space="preserve">
     <value>使用しているライブラリ</value>
   </data>
-  <data name="AboutInfoLicenseBody" xml:space="preserve">
+  <data name="MessageAboutInfoLicenseBody" xml:space="preserve">
     <value>このソフトウェアはMITライセンスです。
 詳細は以下のURLを参照してください。</value>
   </data>
-  <data name="AboutInfoLicenseTitle" xml:space="preserve">
+  <data name="License" xml:space="preserve">
     <value>ライセンス</value>
   </data>
-  <data name="AboutInfoProductTitle" xml:space="preserve">
+  <data name="ProductName" xml:space="preserve">
     <value>製品名</value>
   </data>
-  <data name="AboutInfoVersionTitle" xml:space="preserve">
+  <data name="Version" xml:space="preserve">
     <value>バージョン</value>
   </data>
-  <data name="AboutInfoLibrariesBody" xml:space="preserve">
+  <data name="MessageAboutInfoLibrariesBody" xml:space="preserve">
     <value>詳細は以下のURLを参照してください。</value>
   </data>
   <data name="MenuComparison" xml:space="preserve">
     <value>比較系(_D)</value>
   </data>
-  <data name="MenuComparisonDefinition" xml:space="preserve">
+  <data name="ViewTitleComparisonDefinition" xml:space="preserve">
     <value>定義比較</value>
   </data>
-  <data name="SubTitleComparisonDefinition" xml:space="preserve">
-    <value>定義比較</value>
-  </data>
-  <data name="ComparisonDefinitionAdd" xml:space="preserve">
+  <data name="AddDefinition" xml:space="preserve">
     <value>追加定義</value>
   </data>
-  <data name="ComparisonDefinitionAfter" xml:space="preserve">
+  <data name="AfterDefinition" xml:space="preserve">
     <value>変更後定義</value>
   </data>
-  <data name="ComparisonDefinitionBefore" xml:space="preserve">
+  <data name="BeforeDefinition" xml:space="preserve">
     <value>変更前定義</value>
   </data>
-  <data name="ComparisonDefinitionChange" xml:space="preserve">
+  <data name="ChangeDefinition" xml:space="preserve">
     <value>変更定義</value>
   </data>
-  <data name="ComparisonDefinitionCompare" xml:space="preserve">
-    <value>比較実行</value>
+  <data name="Compare" xml:space="preserve">
+    <value>比較</value>
   </data>
-  <data name="ComparisonDefinitionDelete" xml:space="preserve">
+  <data name="DeleteDefinition" xml:space="preserve">
     <value>削除定義</value>
   </data>
-  <data name="ComparisonDefinitionComplete" xml:space="preserve">
+  <data name="MessageComplete" xml:space="preserve">
     <value>完了しました｡</value>
   </data>
-  <data name="ComparisonDefinitionProcessing" xml:space="preserve">
+  <data name="MessageProcessing" xml:space="preserve">
     <value>処理中です｡</value>
   </data>
 </root>

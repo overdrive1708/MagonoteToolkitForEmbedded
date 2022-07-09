@@ -37,13 +37,13 @@
                         <MenuItem
                             Command="{Binding CommandTransitionView}"
                             CommandParameter="UserControlComparisonDefinition"
-                            Header="{x:Static p:Resources.MenuComparisonDefinition}" />
+                            Header="{x:Static p:Resources.ViewTitleComparisonDefinition}" />
                     </MenuItem>
                     <MenuItem Header="{x:Static p:Resources.MenuHelp}">
                         <MenuItem
                             Command="{Binding CommandTransitionView}"
                             CommandParameter="UserControlAboutInfo"
-                            Header="{x:Static p:Resources.MenuAboutInfo}" />
+                            Header="{x:Static p:Resources.ViewTitleAboutInfo}" />
                     </MenuItem>
                 </Menu>
                 <ContentControl HorizontalAlignment="Center" prism:RegionManager.RegionName="ContentRegion" />
