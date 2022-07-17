@@ -19,7 +19,7 @@
                 Command="{Binding CommandChangeClangDefineMode}"
                 Content="{x:Static p:Resources.CompareClangDefines}"
                 IsChecked="{Binding IsClangDefineMode}"
-                IsEnabled="{Binding IsEnableCompare}"
+                IsEnabled="{Binding IsEnableInput}"
                 Style="{StaticResource MaterialDesignCheckBox}" />
             <StackPanel Orientation="Horizontal">
                 <TextBox
@@ -31,7 +31,7 @@
                     AcceptsReturn="True"
                     Cursor="Arrow"
                     HorizontalScrollBarVisibility="Auto"
-                    IsEnabled="{Binding IsEnableCompare}"
+                    IsEnabled="{Binding IsEnableInput}"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.BeforeDefines}"
                     VerticalScrollBarVisibility="Auto" />
@@ -44,7 +44,7 @@
                     AcceptsReturn="True"
                     Cursor="Arrow"
                     HorizontalScrollBarVisibility="Auto"
-                    IsEnabled="{Binding IsEnableCompare}"
+                    IsEnabled="{Binding IsEnableInput}"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.AfterDefines}"
                     VerticalScrollBarVisibility="Auto" />
@@ -62,7 +62,7 @@
                     AcceptsReturn="True"
                     Cursor="Arrow"
                     HorizontalScrollBarVisibility="Auto"
-                    IsEnabled="{Binding IsEnableCompare}"
+                    IsEnabled="{Binding IsEnableInput}"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.AddDefines}"
                     VerticalScrollBarVisibility="Auto" />
@@ -75,7 +75,7 @@
                     AcceptsReturn="True"
                     Cursor="Arrow"
                     HorizontalScrollBarVisibility="Auto"
-                    IsEnabled="{Binding IsEnableCompare}"
+                    IsEnabled="{Binding IsEnableInput}"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     Text="{Binding DefineListData.DeleteDefines}"
                     VerticalScrollBarVisibility="Auto" />
@@ -88,7 +88,7 @@
                 AutoGenerateColumns="False"
                 CanUserSortColumns="False"
                 HeadersVisibility="Column"
-                IsEnabled="{Binding IsEnableCompare}"
+                IsEnabled="{Binding IsEnableInput}"
                 IsReadOnly="True"
                 ItemsSource="{Binding DefineListData.ChangeDefines}"
                 Visibility="{Binding ChangeDefineListVisibility}">
