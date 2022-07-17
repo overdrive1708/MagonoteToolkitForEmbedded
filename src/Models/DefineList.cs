@@ -169,7 +169,11 @@ namespace MagonoteToolkitForEmbedded.Models
             CreateBeforeDefineList(compareMode);
             CreateAfterDefineList(compareMode);
 
-            ProgressInfoData.Maximum = _beforeDefineList.Count + _afterDefineList.Count + _afterDefineList.Count;
+            ProgressInfoData.Maximum = _beforeDefineList.Count + _afterDefineList.Count;
+            if (compareMode == CompareMode.ClangDefine)
+            {
+                ProgressInfoData.Maximum = ProgressInfoData.Maximum + _afterDefineList.Count;
+            }
 
             CheckAddDefine();
             CheckDeleteDefine();
