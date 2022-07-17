@@ -200,4 +200,76 @@ Please select a tool from the menu.</value>
   <data name="CompareClangDefines" xml:space="preserve">
     <value>Compare C language defines</value>
   </data>
+  <data name="MenuInspection" xml:space="preserve">
+    <value>Inspection(_I)</value>
+  </data>
+  <data name="ViewTitleFileInspection" xml:space="preserve">
+    <value>File inspection</value>
+  </data>
+  <data name="CheckEnabled" xml:space="preserve">
+    <value>Check enabled</value>
+  </data>
+  <data name="CheckDisabled" xml:space="preserve">
+    <value>Check disabled</value>
+  </data>
+  <data name="ResultOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ResultNG" xml:space="preserve">
+    <value>NG</value>
+  </data>
+  <data name="ResultNA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="InspectionTarget" xml:space="preserve">
+    <value>Inspection target</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="InspectionOptions" xml:space="preserve">
+    <value>Inspection options</value>
+  </data>
+  <data name="NewlineAtEOF" xml:space="preserve">
+    <value>Newline at EOF</value>
+  </data>
+  <data name="InspectionResult" xml:space="preserve">
+    <value>Inspection result</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="Inspection" xml:space="preserve">
+    <value>Inspection</value>
+  </data>
+  <data name="ImportantNotice" xml:space="preserve">
+    <value>Important notice</value>
+  </data>
+  <data name="MessageSupportOnlyShiftJIS" xml:space="preserve">
+    <value>Support only "Shift_JIS".</value>
+  </data>
+  <data name="MessageFieldIsRequired" xml:space="preserve">
+    <value>Field is required.</value>
+  </data>
+  <data name="MessageFolderNotFound" xml:space="preserve">
+    <value>Folder not found.</value>
+  </data>
+  <data name="LineFeedCodeOnlyCR" xml:space="preserve">
+    <value>Only "CR"</value>
+  </data>
+  <data name="LineFeedCodeOnlyLF" xml:space="preserve">
+    <value>Only "LF"</value>
+  </data>
+  <data name="LineFeedCodeOnlyCRLF" xml:space="preserve">
+    <value>Only "CR+LF"</value>
+  </data>
+  <data name="LineFeedCodeMixed" xml:space="preserve">
+    <value>Mixed</value>
+  </data>
+  <data name="LineFeedCodeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="LineFeedCode" xml:space="preserve">
+    <value>Line feed code</value>
+  </data>
 </root>

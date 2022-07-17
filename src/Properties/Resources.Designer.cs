@@ -124,6 +124,24 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Check disabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CheckDisabled {
+            get {
+                return ResourceManager.GetString("CheckDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Check enabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CheckEnabled {
+            get {
+                return ResourceManager.GetString("CheckEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Compare に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Compare {
@@ -151,6 +169,60 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   File name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FileName {
+            get {
+                return ResourceManager.GetString("FileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Important notice に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ImportantNotice {
+            get {
+                return ResourceManager.GetString("ImportantNotice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inspection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Inspection {
+            get {
+                return ResourceManager.GetString("Inspection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inspection options に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InspectionOptions {
+            get {
+                return ResourceManager.GetString("InspectionOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inspection result に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InspectionResult {
+            get {
+                return ResourceManager.GetString("InspectionResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inspection target に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InspectionTarget {
+            get {
+                return ResourceManager.GetString("InspectionTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Libraries used に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LibrariesUsed {
@@ -165,6 +237,60 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string License {
             get {
                 return ResourceManager.GetString("License", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Line feed code に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCode {
+            get {
+                return ResourceManager.GetString("LineFeedCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Mixed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCodeMixed {
+            get {
+                return ResourceManager.GetString("LineFeedCodeMixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Only &quot;CR&quot; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCodeOnlyCR {
+            get {
+                return ResourceManager.GetString("LineFeedCodeOnlyCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Only &quot;CR+LF&quot; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCodeOnlyCRLF {
+            get {
+                return ResourceManager.GetString("LineFeedCodeOnlyCRLF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Only &quot;LF&quot; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCodeOnlyLF {
+            get {
+                return ResourceManager.GetString("LineFeedCodeOnlyLF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Unknown に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LineFeedCodeUnknown {
+            get {
+                return ResourceManager.GetString("LineFeedCodeUnknown", resourceCulture);
             }
         }
         
@@ -201,6 +327,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string MenuHelp {
             get {
                 return ResourceManager.GetString("MenuHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inspection(_I) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuInspection {
+            get {
+                return ResourceManager.GetString("MenuInspection", resourceCulture);
             }
         }
         
@@ -242,11 +377,38 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Field is required. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageFieldIsRequired {
+            get {
+                return ResourceManager.GetString("MessageFieldIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Folder not found. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageFolderNotFound {
+            get {
+                return ResourceManager.GetString("MessageFolderNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Now processing. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MessageProcessing {
             get {
                 return ResourceManager.GetString("MessageProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Support only &quot;Shift_JIS&quot;. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageSupportOnlyShiftJIS {
+            get {
+                return ResourceManager.GetString("MessageSupportOnlyShiftJIS", resourceCulture);
             }
         }
         
@@ -270,11 +432,56 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Newline at EOF に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NewlineAtEOF {
+            get {
+                return ResourceManager.GetString("NewlineAtEOF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Open {
+            get {
+                return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Product name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ProductName {
             get {
                 return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   N/A に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ResultNA {
+            get {
+                return ResourceManager.GetString("ResultNA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   NG に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ResultNG {
+            get {
+                return ResourceManager.GetString("ResultNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ResultOK {
+            get {
+                return ResourceManager.GetString("ResultOK", resourceCulture);
             }
         }
         
@@ -302,6 +509,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string ViewTitleComparisonDefinition {
             get {
                 return ResourceManager.GetString("ViewTitleComparisonDefinition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File inspection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewTitleFileInspection {
+            get {
+                return ResourceManager.GetString("ViewTitleFileInspection", resourceCulture);
             }
         }
     }
