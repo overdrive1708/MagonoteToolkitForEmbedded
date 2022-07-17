@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-07-17
+
 ### Added
  - File inspection.
 
@@ -22,4 +24,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - Definition comparison.
 
 [Unreleased]: https://github.com/overdrive1708/MagonoteToolkitForEmbedded
+[1.1.0]: https://github.com/overdrive1708/MagonoteToolkitForEmbedded/releases/tag/v1.1.0
 [1.0.0]: https://github.com/overdrive1708/MagonoteToolkitForEmbedded/releases/tag/v1.0.0
