@@ -20,7 +20,7 @@ Software Development Toolkit for Embedded Software Development
 - R2A20178NP-Register calculation (to be implemented)
 
 ### Comparison system
-- Definition Comparison
+- Definition comparison
 
 ### Inspection system
 - File inspection

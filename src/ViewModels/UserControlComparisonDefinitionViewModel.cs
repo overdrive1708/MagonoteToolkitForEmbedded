@@ -45,6 +45,16 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         }
 
         /// <summary>
+        /// 入力有効フラグ
+        /// </summary>
+        private bool _isEnableInput = true;
+        public bool IsEnableInput
+        {
+            get { return _isEnableInput; }
+            set { SetProperty(ref _isEnableInput, value); }
+        }
+
+        /// <summary>
         /// 比較実行ボタンプログレスバー表示フラグ
         /// </summary>
         private bool _isProgressIndicatorVisible = false;
@@ -132,6 +142,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         private async void ExecuteCommandCompare()
         {
             IsEnableCompare = false;
+            IsEnableInput = false;
             IsProgressIndicatorVisible = true;
 
             CompareState = Properties.Resources.MessageProcessing;
@@ -150,6 +161,7 @@ namespace MagonoteToolkitForEmbedded.ViewModels
 
             CompareState = Properties.Resources.MessageComplete;
 
+            IsEnableInput = true;
             IsProgressIndicatorVisible = false;
 
             _timerCompareEnableWait.Start();
