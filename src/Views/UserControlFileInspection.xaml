@@ -1,0 +1,145 @@
+﻿<UserControl
+    x:Class="MagonoteToolkitForEmbedded.Views.UserControlFileInspection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:MagonoteToolkitForEmbedded.Properties"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:utilities="clr-namespace:MagonoteToolkitForEmbedded.Utilities"
+    xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:UserControlFileInspectionViewModel,
+                                     IsDesignTimeCreatable=True}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style
+            x:Key="ButtonStyleInspection"
+            BasedOn="{StaticResource MaterialDesignOutlinedButton}"
+            TargetType="Button">
+            <Setter Property="IsEnabled" Value="false" />
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=TextBoxInspectionDir, Path=(Validation.HasError)}" Value="false" />
+                        <Condition Binding="{Binding IsEnableInspection}" Value="true" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="true" />
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10,10,10,10">
+        <StackPanel>
+            <TextBlock
+                Margin="10,10,10,0"
+                Foreground="OrangeRed"
+                Style="{StaticResource MaterialDesignBody1TextBlock}"
+                Text="{Binding ImportantNotice}" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    x:Name="TextBoxInspectionDir"
+                    Width="700"
+                    Margin="10,10,10,10"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="{x:Static p:Resources.InspectionTarget}"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Cursor="Arrow"
+                    HorizontalScrollBarVisibility="Auto"
+                    IsEnabled="{Binding IsEnableInput}"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="FileInspectorData.InspectionDir" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <utilities:NotEmptyValidationRule ValidatesOnTargetUpdated="True" />
+                                <utilities:ExistFolderValidationRule ValidatesOnTargetUpdated="True" />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <Button
+                    Margin="10,10,10,10"
+                    Command="{Binding CommandOpenShowFolderDialog}"
+                    IsEnabled="{Binding IsEnableInput}"
+                    Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+                    ToolTip="{x:Static p:Resources.Open}">
+                    <materialDesign:PackIcon Kind="Folder" />
+                </Button>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock
+                        Margin="10,10,10,0"
+                        Style="{StaticResource MaterialDesignBody1TextBlock}"
+                        Text="{x:Static p:Resources.InspectionOptions}" />
+                    <ComboBox
+                        Margin="10,0,10,10"
+                        materialDesign:ColorZoneAssist.Mode="SecondaryLight"
+                        materialDesign:HintAssist.Hint="{x:Static p:Resources.NewlineAtEOF}"
+                        materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+                        IsEnabled="{Binding IsEnableInput}"
+                        ItemsSource="{Binding FileInspectorData.ConfigListNewlineAtEOF}"
+                        SelectedItem="{Binding FileInspectorData.ConfigValueNewlineAtEOF}"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                    <ComboBox
+                        Margin="10,0,10,10"
+                        materialDesign:ColorZoneAssist.Mode="SecondaryLight"
+                        materialDesign:HintAssist.Hint="{x:Static p:Resources.LineFeedCode}"
+                        materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+                        IsEnabled="{Binding IsEnableInput}"
+                        ItemsSource="{Binding FileInspectorData.ConfigListLineFeedCode}"
+                        SelectedItem="{Binding FileInspectorData.ConfigValueLineFeedCode}"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock
+                        Margin="10,10,10,0"
+                        Style="{StaticResource MaterialDesignBody1TextBlock}"
+                        Text="{x:Static p:Resources.InspectionResult}" />
+                    <DataGrid
+                        Height="400"
+                        MinWidth="600"
+                        MaxWidth="800"
+                        Margin="10,0,10,10"
+                        materialDesign:DataGridAssist.CellPadding="4 2 2 2"
+                        materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2"
+                        AutoGenerateColumns="False"
+                        HeadersVisibility="Column"
+                        HorizontalScrollBarVisibility="Auto"
+                        IsEnabled="{Binding IsEnableInput}"
+                        IsReadOnly="True"
+                        ItemsSource="{Binding FileInspectorData.InspectionResultData}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=FileName}" Header="{x:Static p:Resources.FileName}" />
+                            <DataGridTextColumn Binding="{Binding Path=ResultNewlineAtEOF}" Header="{x:Static p:Resources.NewlineAtEOF}" />
+                            <DataGridTextColumn Binding="{Binding Path=ResultLineFeedCode}" Header="{x:Static p:Resources.LineFeedCode}" />
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=HasError}" Value="true">
+                                        <Setter Property="Background" Value="Red" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                    </DataGrid>
+                </StackPanel>
+            </StackPanel>
+            <Button
+                Height="50"
+                Margin="10,10,10,10"
+                materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsProgressIndicatorVisible}"
+                materialDesign:ButtonProgressAssist.Maximum="{Binding FileInspectorData.ProgressInfoData.Maximum}"
+                materialDesign:ButtonProgressAssist.Minimum="{Binding FileInspectorData.ProgressInfoData.Minimum}"
+                materialDesign:ButtonProgressAssist.Value="{Binding FileInspectorData.ProgressInfoData.Now}"
+                Command="{Binding CommandInspection}"
+                Content="{Binding InspectionState}"
+                Cursor="Hand"
+                Style="{DynamicResource ButtonStyleInspection}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

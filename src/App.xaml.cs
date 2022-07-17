@@ -19,6 +19,7 @@ namespace MagonoteToolkitForEmbedded
             // 画面遷移を行う画面を登録する
             containerRegistry.RegisterForNavigation<UserControlWelcome>();
             containerRegistry.RegisterForNavigation<UserControlComparisonDefinition>();
+            containerRegistry.RegisterForNavigation<UserControlFileInspection>();
             containerRegistry.RegisterForNavigation<UserControlAboutInfo>();
         }
     }

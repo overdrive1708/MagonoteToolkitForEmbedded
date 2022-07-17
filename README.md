@@ -22,6 +22,11 @@ Software Development Toolkit for Embedded Software Development
 ### Comparison system
 - Definition Comparison
 
+### Inspection system
+- File inspection
+    - newline character (only shift_jis)
+    - newline at end of file (only shift_jis)
+
 ## How to install
 - Run setup.exe.
 
@@ -43,6 +48,7 @@ Software Development Toolkit for Embedded Software Development
 - MaterialDesignColors(Version.2.0.6)
 - MahApps.Metro(Version.2.4.9)
 - MahApps.Metro.IconPacks(Version.4.11.0)
+- Microsoft-WindowsAPICodePack-Shell(Version.1.1.4)
 
 ## License
 This project is licensed under the MIT License.  

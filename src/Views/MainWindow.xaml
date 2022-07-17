@@ -39,6 +39,12 @@
                             CommandParameter="UserControlComparisonDefinition"
                             Header="{x:Static p:Resources.ViewTitleComparisonDefinition}" />
                     </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuInspection}">
+                        <MenuItem
+                            Command="{Binding CommandTransitionView}"
+                            CommandParameter="UserControlFileInspection"
+                            Header="{x:Static p:Resources.ViewTitleFileInspection}" />
+                    </MenuItem>
                     <MenuItem Header="{x:Static p:Resources.MenuHelp}">
                         <MenuItem
                             Command="{Binding CommandTransitionView}"

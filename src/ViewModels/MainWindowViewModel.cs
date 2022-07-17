@@ -69,10 +69,14 @@ namespace MagonoteToolkitForEmbedded.ViewModels
                 case "UserControlComparisonDefinition":
                     Title = $"{Properties.Resources.ApplicationTitle} | {Properties.Resources.ViewTitleComparisonDefinition}";
                     break;
+                case "UserControlFileInspection":
+                    Title = $"{Properties.Resources.ApplicationTitle} | {Properties.Resources.ViewTitleFileInspection}";
+                    break;
                 case "UserControlAboutInfo":
                     Title = $"{Properties.Resources.ApplicationTitle} | {Properties.Resources.ViewTitleAboutInfo}";
                     break;
                 default:
+                    Title = Properties.Resources.ApplicationTitle;
                     break;
             }
         }

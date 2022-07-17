@@ -23,6 +23,11 @@
 ### 比較系
 - 定義比較
 
+### 検査系
+- ファイル検査
+    - 改行コード(shift_jisのみ)
+    - ファイル末尾の改行(shift_jisのみ)
+
 ## インストール方法
 - setup.exeを実行してください｡
 
@@ -44,6 +49,7 @@
 - MaterialDesignColors(Version.2.0.6)
 - MahApps.Metro(Version.2.4.9)
 - MahApps.Metro.IconPacks(Version.4.11.0)
+- Microsoft-WindowsAPICodePack-Shell(Version.1.1.4)
 
 ## ライセンス
 このプロジェクトはMITライセンスです。  
