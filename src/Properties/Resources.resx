@@ -182,7 +182,7 @@ See the following URL for details.</value>
     <value>AboutInfo</value>
   </data>
   <data name="ViewTitleComparisonDefinition" xml:space="preserve">
-    <value>Definition Comparison</value>
+    <value>Definition comparison</value>
   </data>
   <data name="MessageWelcomeBody" xml:space="preserve">
     <value>This toolkit is a collection of useful tools for embedded software development.
@@ -192,10 +192,10 @@ Please select a tool from the menu.</value>
     <value>Welcome to "Magonote Toolkit For Embedded"!</value>
   </data>
   <data name="AfterValue" xml:space="preserve">
-    <value>After Value</value>
+    <value>After value</value>
   </data>
   <data name="BeforeValue" xml:space="preserve">
-    <value>Before Value</value>
+    <value>Before value</value>
   </data>
   <data name="CompareClangDefines" xml:space="preserve">
     <value>Compare C language defines</value>

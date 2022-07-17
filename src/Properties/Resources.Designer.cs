@@ -79,7 +79,7 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
-        ///   After Value に類似しているローカライズされた文字列を検索します。
+        ///   After value に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AfterValue {
             get {
@@ -106,7 +106,7 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
-        ///   Before Value に類似しているローカライズされた文字列を検索します。
+        ///   Before value に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string BeforeValue {
             get {
@@ -504,7 +504,7 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
-        ///   Definition Comparison に類似しているローカライズされた文字列を検索します。
+        ///   Definition comparison に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ViewTitleComparisonDefinition {
             get {
