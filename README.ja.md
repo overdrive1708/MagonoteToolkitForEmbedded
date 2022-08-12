@@ -1,8 +1,23 @@
 [English](README.md) | [日本語](README.ja.md)
 
-# MagonoteToolkitForEmbedded
-かゆいところに手が届く!!  
-ソフト開発ツールキット for 組み込みソフトウェア開発
+<div align="center">
+<a href="https://github.com/overdrive1708/MagonoteToolkitForEmbedded">
+<img alt="MagonoteToolkitForEmbedded" src="docs/images/logo.png" width="50%">
+</a>
+</div>
+
+<h2 align="center">
+    かゆいところに手が届く!!<br>
+    ソフト開発ツールキット for 組み込みソフトウェア開発  
+</h2>
+
+<div align="center">
+    <img alt="csharp" src="https://img.shields.io/badge/csharp-blue.svg?style=plastic&logo=csharp">
+    <img alt="dotnet" src="https://img.shields.io/badge/.NET-blue.svg?style=plastic&logo=dotnet">
+    <img alt="license" src="https://img.shields.io/github/license/overdrive1708/MagonoteToolkitForEmbedded?style=plastic">
+    <img alt="repo size" src="https://img.shields.io/github/repo-size/overdrive1708/MagonoteToolkitForEmbedded?style=plastic&logo=github">
+    <img alt="release" src="https://img.shields.io/github/release/overdrive1708/MagonoteToolkitForEmbedded?style=plastic&logo=github">
+</div>
 
 ## 機能一覧
 
@@ -21,10 +36,10 @@
 - R2A20178NP-レジスタ計算(実装予定)
 
 ### 比較系
-- 定義比較
+- [定義比較](docs/FeatureDetailDefinitionComparison.md)
 
 ### 検査系
-- ファイル検査
+- [ファイル検査](docs/FeatureDetailFileInspection.md)
     - 改行コード(shift_jisのみ)
     - ファイル末尾の改行(shift_jisのみ)
 
