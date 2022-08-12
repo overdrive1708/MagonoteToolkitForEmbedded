@@ -377,6 +377,17 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   A fatal error has occurred.
+        ///Termination this application.
+        ///========== more information: ========== に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageFatalError {
+            get {
+                return ResourceManager.GetString("MessageFatalError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Field is required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MessageFieldIsRequired {

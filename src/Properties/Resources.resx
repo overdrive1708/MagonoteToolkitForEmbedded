@@ -272,4 +272,9 @@ Please select a tool from the menu.</value>
   <data name="LineFeedCode" xml:space="preserve">
     <value>Line feed code</value>
   </data>
+  <data name="MessageFatalError" xml:space="preserve">
+    <value>A fatal error has occurred.
+Termination this application.
+========== more information: ==========</value>
+  </data>
 </root>

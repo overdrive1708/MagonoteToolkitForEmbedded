@@ -272,4 +272,9 @@
   <data name="LineFeedCode" xml:space="preserve">
     <value>改行コード</value>
   </data>
+  <data name="MessageFatalError" xml:space="preserve">
+    <value>致命的なエラーが発生しました。
+このアプリケーションを終了します｡
+==========詳細情報==========</value>
+  </data>
 </root>
