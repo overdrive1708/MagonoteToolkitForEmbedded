@@ -1,7 +1,22 @@
 [English](README.md) | [日本語](README.ja.md)
 
-# MagonoteToolkitForEmbedded
-Software Development Toolkit for Embedded Software Development
+<div align="center">
+<a href="https://github.com/overdrive1708/MagonoteToolkitForEmbedded">
+<img alt="MagonoteToolkitForEmbedded" src="docs/images/logo.png" width="50%">
+</a>
+</div>
+
+<h2 align="center">
+    Software Development Toolkit for Embedded Software Development
+</h2>
+
+<div align="center">
+    <img alt="csharp" src="https://img.shields.io/badge/csharp-blue.svg?style=plastic&logo=csharp">
+    <img alt="dotnet" src="https://img.shields.io/badge/.NET-blue.svg?style=plastic&logo=dotnet">
+    <img alt="license" src="https://img.shields.io/github/license/overdrive1708/MagonoteToolkitForEmbedded?style=plastic">
+    <img alt="repo size" src="https://img.shields.io/github/repo-size/overdrive1708/MagonoteToolkitForEmbedded?style=plastic&logo=github">
+    <img alt="release" src="https://img.shields.io/github/release/overdrive1708/MagonoteToolkitForEmbedded?style=plastic&logo=github">
+</div>
 
 ## Feature List
 
@@ -20,10 +35,10 @@ Software Development Toolkit for Embedded Software Development
 - R2A20178NP-Register calculation (to be implemented)
 
 ### Comparison system
-- Definition comparison
+- [Definition comparison](docs/FeatureDetailDefinitionComparison.md)
 
 ### Inspection system
-- File inspection
+- [File inspection](docs/FeatureDetailFileInspection.md)
     - newline character (only shift_jis)
     - newline at end of file (only shift_jis)
 
@@ -54,7 +69,7 @@ Software Development Toolkit for Embedded Software Development
 This project is licensed under the MIT License.  
 See [LICENSE](LICENSE) for details.
 
-## Author.
+## Author
 [overdrive1708](https://github.com/overdrive1708)
 
 ## Changelog
