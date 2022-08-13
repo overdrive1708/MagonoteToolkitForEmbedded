@@ -65,6 +65,7 @@
 - MahApps.Metro(Version.2.4.9)
 - MahApps.Metro.IconPacks(Version.4.11.0)
 - Microsoft-WindowsAPICodePack-Shell(Version.1.1.4)
+- CommandLineParser(Version.2.9.1)
 
 ## ライセンス
 このプロジェクトはMITライセンスです。  

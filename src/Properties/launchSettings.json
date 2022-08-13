@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MagonoteToolkitForEmbedded": {
+      "commandName": "Project"
+    },
+    "CultureInfo-en-US": {
+      "commandName": "Project",
+      "commandLineArgs": "--cultureinfo=en-US"
+    }
+  }
+}
