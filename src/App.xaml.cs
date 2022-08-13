@@ -1,6 +1,10 @@
-﻿using MagonoteToolkitForEmbedded.Views;
+﻿using CommandLine;
+using MagonoteToolkitForEmbedded.Utilities;
+using MagonoteToolkitForEmbedded.Views;
 using Prism.Ioc;
 using System;
+using System.Globalization;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
@@ -14,6 +18,19 @@ namespace MagonoteToolkitForEmbedded
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            // コマンドラインオプションを解析してカルチャーを切り替える
+            using (CommandLine.Parser parser = new((setting) => setting.HelpWriter = null))
+            {
+                CommandLine.ParserResult<CommandLineOptions> parsed = parser.ParseArguments<CommandLineOptions>(e.Args);
+                _ = parsed.WithParsed(opt =>
+                {
+                    if (opt.CultureInfo == "en-US")
+                    {
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    }
+                });
+            }
+
             base.OnStartup(e);
 
             // 未処理の例外を処理するイベントハンドラを登録する
