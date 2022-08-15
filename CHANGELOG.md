@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
  - Exception handling mechanism.
  - Startup option.(Culture change)
+ - Tally counter.
 
 ## [1.1.0] - 2022-07-17
 

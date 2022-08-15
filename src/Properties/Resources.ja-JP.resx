@@ -277,4 +277,23 @@
 このアプリケーションを終了します｡
 ==========詳細情報==========</value>
   </data>
+  <data name="MenuMeasurement" xml:space="preserve">
+    <value>計測系</value>
+  </data>
+  <data name="ViewTitleTallyCounter" xml:space="preserve">
+    <value>数取器</value>
+  </data>
+  <data name="CountUp" xml:space="preserve">
+    <value>カウントアップ</value>
+  </data>
+  <data name="CountDown" xml:space="preserve">
+    <value>カウントダウン</value>
+  </data>
+  <data name="CountClear" xml:space="preserve">
+    <value>カウントクリア</value>
+  </data>
+  <data name="MessageHelpTallyCounter" xml:space="preserve">
+    <value>[1][2][3][4][5]:カウンタ選択 | [W]:カウントアップ | [S]:カウントダウン | [BackSpace]:カウントクリア
+テンキー [1][2][3][4][5]:カウンタ選択 | [+]:カウントアップ | [-]:カウントダウン | [0]:カウントクリア</value>
+  </data>
 </root>

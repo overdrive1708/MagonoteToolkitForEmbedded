@@ -277,4 +277,23 @@ Please select a tool from the menu.</value>
 Termination this application.
 ========== more information: ==========</value>
   </data>
+  <data name="MenuMeasurement" xml:space="preserve">
+    <value>Measurement</value>
+  </data>
+  <data name="ViewTitleTallyCounter" xml:space="preserve">
+    <value>Tally counter</value>
+  </data>
+  <data name="CountUp" xml:space="preserve">
+    <value>Count up</value>
+  </data>
+  <data name="CountDown" xml:space="preserve">
+    <value>Count down</value>
+  </data>
+  <data name="CountClear" xml:space="preserve">
+    <value>Count clear</value>
+  </data>
+  <data name="MessageHelpTallyCounter" xml:space="preserve">
+    <value>[1][2][3][4][5]:Select counter | [W]:Count up | [S]:Count down | [BackSpace]:Count clear
+numpad [1][2][3][4][5]:Select counter | [+]:Count up | [-]:Count down | [0]:Count clear</value>
+  </data>
 </root>

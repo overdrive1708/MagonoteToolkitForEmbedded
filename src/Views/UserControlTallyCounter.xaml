@@ -1,0 +1,340 @@
+﻿<UserControl
+    x:Class="MagonoteToolkitForEmbedded.Views.UserControlTallyCounter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:MagonoteToolkitForEmbedded.Properties"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:viewmodels="clr-namespace:MagonoteToolkitForEmbedded.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:UserControlTallyCounterViewModel,
+                                     IsDesignTimeCreatable=True}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <!--  選択中カウンタの強調  -->
+        <Style x:Key="BorderStyleBase" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Width" Value="200" />
+        </Style>
+        <Style
+            x:Key="BorderStyle1"
+            BasedOn="{StaticResource BorderStyleBase}"
+            TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedCounterNum}" Value="{x:Static viewmodels:UserControlTallyCounterViewModel+CounterNum.Counter1}">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style
+            x:Key="BorderStyle2"
+            BasedOn="{StaticResource BorderStyleBase}"
+            TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedCounterNum}" Value="{x:Static viewmodels:UserControlTallyCounterViewModel+CounterNum.Counter2}">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style
+            x:Key="BorderStyle3"
+            BasedOn="{StaticResource BorderStyleBase}"
+            TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedCounterNum}" Value="{x:Static viewmodels:UserControlTallyCounterViewModel+CounterNum.Counter3}">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style
+            x:Key="BorderStyle4"
+            BasedOn="{StaticResource BorderStyleBase}"
+            TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedCounterNum}" Value="{x:Static viewmodels:UserControlTallyCounterViewModel+CounterNum.Counter4}">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style
+            x:Key="BorderStyle5"
+            BasedOn="{StaticResource BorderStyleBase}"
+            TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedCounterNum}" Value="{x:Static viewmodels:UserControlTallyCounterViewModel+CounterNum.Counter5}">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!--  ボタンの共通スタイル  -->
+        <Style
+            x:Key="ButtonCommon"
+            BasedOn="{StaticResource MaterialDesignIconButton}"
+            TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Focusable" Value="False" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10,10,10,10" VerticalAlignment="Center">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <!--  カウンタNo.1  -->
+                <Border Style="{StaticResource BorderStyle1}">
+                    <StackPanel Margin="10,10,10,10">
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text="No.1" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountUp}"
+                            CommandParameter="Counter1"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountUp}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowUpBold" />
+                        </Button>
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                            Text="{Binding CountString1}" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountDown}"
+                            CommandParameter="Counter1"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountDown}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowDownBold" />
+                        </Button>
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountClear}"
+                            CommandParameter="Counter1"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountClear}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="CloseThick" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <!--  カウンタNo.2  -->
+                <Border Style="{StaticResource BorderStyle2}">
+                    <StackPanel Margin="10,10,10,10">
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text="No.2" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountUp}"
+                            CommandParameter="Counter2"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountUp}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowUpBold" />
+                        </Button>
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                            Text="{Binding CountString2}" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountDown}"
+                            CommandParameter="Counter2"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountDown}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowDownBold" />
+                        </Button>
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountClear}"
+                            CommandParameter="Counter2"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountClear}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="CloseThick" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <!--  カウンタNo.3  -->
+                <Border Style="{StaticResource BorderStyle3}">
+                    <StackPanel Margin="10,10,10,10">
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text="No.3" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountUp}"
+                            CommandParameter="Counter3"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountUp}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowUpBold" />
+                        </Button>
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                            Text="{Binding CountString3}" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountDown}"
+                            CommandParameter="Counter3"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountDown}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowDownBold" />
+                        </Button>
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountClear}"
+                            CommandParameter="Counter3"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountClear}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="CloseThick" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <!--  カウンタNo.4  -->
+                <Border Style="{StaticResource BorderStyle4}">
+                    <StackPanel Margin="10,10,10,10">
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text="No.4" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountUp}"
+                            CommandParameter="Counter4"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountUp}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowUpBold" />
+                        </Button>
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                            Text="{Binding CountString4}" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountDown}"
+                            CommandParameter="Counter4"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountDown}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowDownBold" />
+                        </Button>
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountClear}"
+                            CommandParameter="Counter4"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountClear}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="CloseThick" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <!--  カウンタNo.5  -->
+                <Border Style="{StaticResource BorderStyle5}">
+                    <StackPanel Margin="10,10,10,10">
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text="No.5" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountUp}"
+                            CommandParameter="Counter5"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountUp}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowUpBold" />
+                        </Button>
+                        <TextBlock
+                            Margin="10,10,10,0"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                            Text="{Binding CountString5}" />
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountDown}"
+                            CommandParameter="Counter5"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountDown}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="ArrowDownBold" />
+                        </Button>
+                        <Button
+                            Margin="10,10,10,0"
+                            Command="{Binding CommandCountClear}"
+                            CommandParameter="Counter5"
+                            Style="{StaticResource ButtonCommon}"
+                            ToolTip="{x:Static p:Resources.CountClear}">
+                            <materialDesign:PackIcon
+                                Width="40"
+                                Height="40"
+                                Kind="CloseThick" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            <TextBlock
+                Margin="10,10,10,10"
+                HorizontalAlignment="Center"
+                Style="{StaticResource MaterialDesignBody1TextBlock}"
+                Text="{x:Static p:Resources.MessageHelpTallyCounter}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

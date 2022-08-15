@@ -160,6 +160,33 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Count clear に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CountClear {
+            get {
+                return ResourceManager.GetString("CountClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Count down に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CountDown {
+            get {
+                return ResourceManager.GetString("CountDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Count up に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CountUp {
+            get {
+                return ResourceManager.GetString("CountUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Delete definition に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DeleteDefinition {
@@ -349,6 +376,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         }
         
         /// <summary>
+        ///   Measurement に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuMeasurement {
+            get {
+                return ResourceManager.GetString("MenuMeasurement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   See the following URL for details. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MessageAboutInfoLibrariesBody {
@@ -402,6 +438,16 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string MessageFolderNotFound {
             get {
                 return ResourceManager.GetString("MessageFolderNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   [1][2][3][4][5]:Select counter | [W]:Count up | [S]:Count down | [BackSpace]:Count clear
+        ///numpad [1][2][3][4][5]:Select counter | [+]:Count up | [-]:Count down | [0]:Count clear に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MessageHelpTallyCounter {
+            get {
+                return ResourceManager.GetString("MessageHelpTallyCounter", resourceCulture);
             }
         }
         
@@ -529,6 +575,15 @@ namespace MagonoteToolkitForEmbedded.Properties {
         public static string ViewTitleFileInspection {
             get {
                 return ResourceManager.GetString("ViewTitleFileInspection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Tally counter に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewTitleTallyCounter {
+            get {
+                return ResourceManager.GetString("ViewTitleTallyCounter", resourceCulture);
             }
         }
     }
