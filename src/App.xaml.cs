@@ -50,6 +50,7 @@ namespace MagonoteToolkitForEmbedded
             containerRegistry.RegisterForNavigation<UserControlWelcome>();
             containerRegistry.RegisterForNavigation<UserControlComparisonDefinition>();
             containerRegistry.RegisterForNavigation<UserControlFileInspection>();
+            containerRegistry.RegisterForNavigation<UserControlTallyCounter>();
             containerRegistry.RegisterForNavigation<UserControlAboutInfo>();
         }
 

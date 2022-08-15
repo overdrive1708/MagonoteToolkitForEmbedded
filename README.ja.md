@@ -43,6 +43,9 @@
     - 改行コード(shift_jisのみ)
     - ファイル末尾の改行(shift_jisのみ)
 
+### 計測系
+- [数取器](docs/FeatureDetailTallyCounter.md)
+
 ## インストール方法
 - setup.exeを実行してください｡
 

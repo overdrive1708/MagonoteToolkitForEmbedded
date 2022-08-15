@@ -42,6 +42,9 @@
     - newline character (only shift_jis)
     - newline at end of file (only shift_jis)
 
+### Measurement system
+- [Tally counter](docs/FeatureDetailTallyCounter.md)
+
 ## How to install
 - Run setup.exe.
 

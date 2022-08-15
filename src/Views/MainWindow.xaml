@@ -17,6 +17,74 @@
     Icon="/MagonoteToolkitForEmbedded;component/Images/ApplicationIcon.ico"
     TitleCharacterCasing="Normal"
     mc:Ignorable="d">
+    <Window.InputBindings>
+        <!--  キー入力の捕捉  -->
+        <KeyBinding
+            Key="NumPad0"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad0" />
+        <KeyBinding
+            Key="NumPad1"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad1" />
+        <KeyBinding
+            Key="NumPad2"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad2" />
+        <KeyBinding
+            Key="NumPad3"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad3" />
+        <KeyBinding
+            Key="NumPad4"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad4" />
+        <KeyBinding
+            Key="NumPad5"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="NumPad5" />
+        <KeyBinding
+            Key="D1"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="D1" />
+        <KeyBinding
+            Key="D2"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="D2" />
+        <KeyBinding
+            Key="D3"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="D3" />
+        <KeyBinding
+            Key="D4"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="D4" />
+        <KeyBinding
+            Key="D5"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="D5" />
+        <KeyBinding
+            Key="S"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="S" />
+        <KeyBinding
+            Key="W"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="W" />
+        <KeyBinding
+            Key="Back"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="Back" />
+        <KeyBinding
+            Key="Add"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="Add" />
+        <KeyBinding
+            Key="Subtract"
+            Command="{Binding CommandKeyInput}"
+            CommandParameter="Subtract" />
+    </Window.InputBindings>
+
     <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <DockPanel>
@@ -44,6 +112,12 @@
                             Command="{Binding CommandTransitionView}"
                             CommandParameter="UserControlFileInspection"
                             Header="{x:Static p:Resources.ViewTitleFileInspection}" />
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.MenuMeasurement}">
+                        <MenuItem
+                            Command="{Binding CommandTransitionView}"
+                            CommandParameter="UserControlTallyCounter"
+                            Header="{x:Static p:Resources.ViewTitleTallyCounter}" />
                     </MenuItem>
                     <MenuItem Header="{x:Static p:Resources.MenuHelp}">
                         <MenuItem
