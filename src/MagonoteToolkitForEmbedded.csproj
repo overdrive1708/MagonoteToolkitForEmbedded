@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <VersionPrefix>1.1.0</VersionPrefix>
+    <VersionPrefix>1.2.0</VersionPrefix>
     <Authors>overdrive1708</Authors>
     <Copyright>Copyright © 2022 overdrive1708</Copyright>
     <PackageProjectUrl>https://github.com/overdrive1708/MagonoteToolkitForEmbedded</PackageProjectUrl>
