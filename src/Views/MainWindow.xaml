@@ -12,7 +12,8 @@
     Title="{Binding Title}"
     Width="1280"
     Height="800"
-    d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+    d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel,
+                                     IsDesignTimeCreatable=True}"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Icon="/MagonoteToolkitForEmbedded;component/Images/ApplicationIcon.ico"
     TitleCharacterCasing="Normal"

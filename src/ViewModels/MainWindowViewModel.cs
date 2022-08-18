@@ -57,6 +57,14 @@ namespace MagonoteToolkitForEmbedded.ViewModels
         // メソッド
         //--------------------------------------------------
         /// <summary>
+        /// コンストラクタ(XAMLデザイナー用)
+        /// </summary>
+        public MainWindowViewModel()
+        {
+            // 無処理
+        }
+
+        /// <summary>
         /// コンストラクタ
         /// </summary>
         /// <param name="regionManager"></param>
